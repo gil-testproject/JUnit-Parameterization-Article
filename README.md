@@ -45,17 +45,17 @@ public class ParameterizedTestExample {
 Into something that can be shared, reused, adjusted, managed:
 ![image](https://user-images.githubusercontent.com/81077108/130460317-626b669b-ae10-434c-a71b-676d3c26f6e3.png)
 
-All of the parameters part will be taken care by the system.
+All of the parameters part will be taken care of by the system.
 
-You will able to type the parameters of the method directly in the system:
+You will be able to type the parameters of the method directly in the system:
 ![image](https://user-images.githubusercontent.com/81077108/130460580-3eddcede-bba7-400e-92b6-ce88547e1e22.png)
 
-Once the test is converted to test bundle under the system, you will able to keep using the test while utilizing the power of TestProject.
-You will able to:
+Once the test is converted to a test bundle under the system, you will be able to keep using the test while utilizing the power of TestProject.
+You will be able to:
 
-* Easily manage CSV files without modifiying the code
+* Easily manage CSV files without modifying the code
 * Use the test as part of scheduled execution
-* View execution report that easy to read
+* View execution report that is easy to read
 * Easily run the code in every machine that connected to the TestProject account
 
 
