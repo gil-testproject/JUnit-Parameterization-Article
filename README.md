@@ -73,7 +73,7 @@ https://github.com/gil-testproject/JUnit-Parameterization-Article/tree/main/pure
 
 Let’s have a look on the test class example in this project:
 
-`src\test\java\ParameterizedTestExample.java`
+src\test\java\ParameterizedTestExample.java:
 
 ```java
 import org.junit.jupiter.api.AfterEach;
@@ -131,6 +131,39 @@ public class ParameterizedTestExample {
 }
 ```
 
+
+
+In addition, we also have the fllowing `build.gradle` file:
+
+```gradle
+plugins {
+    id 'java'
+}
+
+group 'io.testproject'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // Selenium
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+
+    // JUnit5
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
+
+    // Module "junit-jupiter-params" of JUnit 5.
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.5.1'
+
+    // TestNG Testing framework
+    testImplementation group: 'org.testng', name: 'testng', version: '7.1.0'
+
+}
+```
+
 The following code will do these steps:
 
 1. Navigate to https://example.testproject.io/
@@ -157,6 +190,9 @@ Here is the final result:
 ![image](https://user-images.githubusercontent.com/81077108/130455076-485c8371-abd7-4822-89b9-e0b956f63864.png)
 
 
-In addition, we also have the fllowing `build.gradle` file
+### Converting to OpenSDK
+
+
+
 
 
