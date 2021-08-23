@@ -50,19 +50,13 @@ All of the parameters part will be taken care by the system.
 You will able to type the parameters of the method directly in the system:
 ![image](https://user-images.githubusercontent.com/81077108/130460580-3eddcede-bba7-400e-92b6-ce88547e1e22.png)
 
-Once the test is converted to test bundle under the system, you will also be able to setup CSV without changing the code.
-![image](https://user-images.githubusercontent.com/81077108/130460994-8141316d-235d-4bcc-95bd-b65dec66f9df.png)
+Once the test is converted to test bundle under the system, you will able to keep using the test while utilizing the power of TestProject.
+You will able to:
 
-`loginTestParameters.csv`:
-```csv
-password,username
-12345,User1
-12345,User2
-12345,User3
-```
-
-Once you generated CSV and uploaded it, you will able to select it here:
-![image](https://user-images.githubusercontent.com/81077108/130461283-8c66686a-b365-45e8-a33f-3d727f36f4a5.png)
+* Easily manage CSV files without modifiying the code
+* Use the test as part of scheduled execution
+* View execution report that easy to read
+* Easily run the code in every machine that connected to the TestProject account
 
 
 
