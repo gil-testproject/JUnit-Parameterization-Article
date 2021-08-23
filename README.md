@@ -1,9 +1,14 @@
 
 # Converting JUnit 5 & Selenium into TestProject coded test
 
-**TestProject service is a great platform to use that can be very helpful for testers who want to simplify the process of creating, sharing, and maintaining existing tests.**
+## Introduction
+In this article, I will explain how to convert the JUnit 5 parameterized test into a test that can be executed with the power of TestProject. This way, we will be able to use all of the good stuff that TestProject brings to us :)
 
-**TestProject brings to us the following benefits**
+
+## Why we need it?
+
+
+### TestProject brings to us the following benefits
 
 * No need to download chrome driver / mobile driver
 * No need to set up reporting service
@@ -11,23 +16,68 @@
 * Free support in our great community ( https://forum.testproject.io/ )
 * Free add-ons (shared code that bundled as "Addons" and can be used in your tests)
 
-**In this article, I will explain how to convert the JUnit 5 parameterized test into a test that can be executed with the power of TestProject. 
-This way, we will be able to use all of the good stuff above that TestProject brings to us :)**
+
+### What you will learn
+
+By the end of this guide you will able to turn this code:
+
+```java
+public class ParameterizedTestExample {
+
+    @ParameterizedTest
+    @MethodSource("provideStringsForIsBlank")
+    public void loginTest(String username, String password) {
+        ...
+        ...
+    }
+
+    private static Stream<Arguments> provideStringsForIsBlank() {
+        return Stream.of(
+                ...
+                ...
+        );
+    }
+
+}
+
+```
+
+Into something that can be shared, reused, adjusted, managed:
+![image](https://user-images.githubusercontent.com/81077108/130460317-626b669b-ae10-434c-a71b-676d3c26f6e3.png)
+
+All of the parameters part will be taken care by the system.
+
+You will able to type the parameters of the method directly in the system:
+![image](https://user-images.githubusercontent.com/81077108/130460580-3eddcede-bba7-400e-92b6-ce88547e1e22.png)
+
+Once the test is converted to test bundle under the system, you will also be able to setup CSV without changing the code.
+![image](https://user-images.githubusercontent.com/81077108/130460994-8141316d-235d-4bcc-95bd-b65dec66f9df.png)
+
+`loginTestParameters.csv`:
+```csv
+password,username
+12345,User1
+12345,User2
+12345,User3
+```
+
+Once you generated CSV and uploaded it, you will able to select it here:
+![image](https://user-images.githubusercontent.com/81077108/130461283-8c66686a-b365-45e8-a33f-3d727f36f4a5.png)
 
 
-# Let's get started!
+
+## Let's get started!
 
 For demonstration purposes only, we will use a very simple JUnit 5 & pure selenium project and we will learn how to take this existing project and turn it into a coded test that can be executed with the TestProject platform (Agent & Service).
 
-## Pure JUnit 5 & Selenium test
-
-To get started, please clone the following simple project:
+Please clone the following simple project:
 
 https://github.com/gil-testproject/JUnit-Parameterization-Article/tree/main/pure-junit5-and-selenium
 
 
-Let’s have a look on the test class example in this project:
+### Pure JUnit 5 & Selenium test
 
+Let’s have a look on the test class example in this project:
 
 `src\test\java\ParameterizedTestExample.java`
 
@@ -109,16 +159,10 @@ private static Stream<Arguments> provideStringsForIsBlank() {
 ```
 
 Here is the final result:
+
 ![image](https://user-images.githubusercontent.com/81077108/130455076-485c8371-abd7-4822-89b9-e0b956f63864.png)
 
-## How the OpenSDK will help us
 
-With the help of the OpenSDK, we will convert this part into something that will be allocated dynamically from the platform.
-So in the end you will have a convenient system where you can easily configure the data source from a very easy-to-use control system.
-I will show it later in this guide :)
+In addition, we also have the fllowing `build.gradle` file
 
-In addition, the following code will not run if you will not take care of downloading yourself `chromedriver.exe` and setting it in the environment variable.
-But in this guide, we are not going to do all of this stuff because TestProject Agent & OpenSDK will download it and set it up for us!
-
-Sounds cool right? 
 
