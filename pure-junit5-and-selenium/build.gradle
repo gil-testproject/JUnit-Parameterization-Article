@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'io.testproject'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // Selenium
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+
+    // JUnit5
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
+
+    // Module "junit-jupiter-params" of JUnit 5.
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.5.1'
+
+    // TestNG Testing framework
+    testImplementation group: 'org.testng', name: 'testng', version: '7.1.0'
+
+}
