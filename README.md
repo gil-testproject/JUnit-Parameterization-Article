@@ -19,6 +19,8 @@ This way, we will be able to use all of the good stuff above that TestProject br
 
 For demonstration purposes only, we will use a very simple JUnit 5 & pure selenium project and we will learn how to take this existing project and turn it into a coded test that can be executed with the TestProject platform (Agent & Service).
 
+## Pure JUnit 5 & Selenium test
+
 To get started, please clone the following simple project:
 
 https://github.com/gil-testproject/JUnit-Parameterization-Article/tree/main/pure-junit5-and-selenium
@@ -27,7 +29,7 @@ https://github.com/gil-testproject/JUnit-Parameterization-Article/tree/main/pure
 Let’s have a look on the test class example in this project:
 
 
-src\test\java\ParameterizedTestExample.java
+`src\test\java\ParameterizedTestExample.java`
 
 ```java
 import org.junit.jupiter.api.AfterEach;
@@ -83,7 +85,7 @@ public class ParameterizedTestExample {
     }
 
 }
-
+```
 
 The following code will do these steps:
 
@@ -105,3 +107,18 @@ private static Stream<Arguments> provideStringsForIsBlank() {
     );
 }
 ```
+
+Here is the final result:
+![image](https://user-images.githubusercontent.com/81077108/130455076-485c8371-abd7-4822-89b9-e0b956f63864.png)
+
+## How the OpenSDK will help us
+
+With the help of the OpenSDK, we will convert this part into something that will be allocated dynamically from the platform.
+So in the end you will have a convenient system where you can easily configure the data source from a very easy-to-use control system.
+I will show it later in this guide :)
+
+In addition, the following code will not run if you will not take care of downloading yourself `chromedriver.exe` and setting it in the environment variable.
+But in this guide, we are not going to do all of this stuff because TestProject Agent & OpenSDK will download it and set it up for us!
+
+Sounds cool right? 
+
