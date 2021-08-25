@@ -9,18 +9,17 @@ repositories {
     mavenCentral()
 }
 
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+compileTestJava.options.compilerArgs.add '-parameters'
+
 dependencies {
     // TestProject OpenSDK
     implementation 'io.testproject:java-sdk:1.2.3-RELEASE'
 
     // JUnit5
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
-
-    // Module "junit-jupiter-params" of JUnit 5.
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.5.1'
-
-    // TestNG Testing framework
-    testImplementation group: 'org.testng', name: 'testng', version: '7.1.0'
 
 }
 
