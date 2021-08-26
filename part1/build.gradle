@@ -17,4 +17,7 @@ dependencies {
     // JUnit5
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
 
+    // JUnit5 - For @ParameterizedTest
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.7.2'
+
 }
