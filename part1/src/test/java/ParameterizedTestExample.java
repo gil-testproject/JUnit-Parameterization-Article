@@ -10,6 +10,9 @@ import java.util.stream.Stream;
 
 public class ParameterizedTestExample {
 
+    // Please uncomment the following code for the second part of the guide:
+
+    /*
     ChromeDriver driver;
 
     @BeforeEach
@@ -23,7 +26,7 @@ public class ParameterizedTestExample {
     }
 
     @ParameterizedTest
-    @DisplayName("Login Test")
+    @DisplayName("Login Test (Parameterized Test)")
     @MethodSource("provideLoginCredentials")
     public void loginTest(String username, String password) {
 
@@ -48,5 +51,6 @@ public class ParameterizedTestExample {
         );
     }
 
+    */
 }
 
